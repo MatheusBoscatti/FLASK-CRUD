@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+</head>
+
+<body>
+    <fieldset>
+        <form action="/atualizar_aluno" method="POST">
+            <label>Nome</label>
+            <input type="text" name="nome" id="nome" value="{{ nome }}" required>
+            <br>
+            <label>Matrícula</label>
+            <input type="text" name="new_matricula" id="matricula" value="{{ matricula }}" required>
+            <input type="hidden" name="old_matricula" value="{{ matricula }}">
+            <br>
+            <input type="submit" value="Atualizar" >
+        </form>
+    </fieldset>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <fieldset>
+        <div class="div_aluno_prof">
+            <form action="/cadastro_prof" method="post">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" pattern="[0-9]*" title="Apenas números são permitidos"
+                    maxlength="11" placeholder="CPF sem pontuação" required>
+                <br>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+                <br>
+                <label for="instituicao">instituição</label>
+                <input type="text" name="instituicao" id="instituicao" required>
+                <br>
+                <label for="externo">Externo</label>
+                <select name="externo" id="externo" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+                <br>
+                <button type="submit">Cadastrar</button>
+
+
+                <a href="/listar_prof" class="button" type="button">Listar</a>
+        </div>
+    </fieldset>
+    </form>
+</body>
+
+</html>

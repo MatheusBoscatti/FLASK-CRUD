@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="body_formulario">
+    <div class="container">
+        <form method="post" action="/cadastro">
+            <div class="form-group">
+                <input class="radio-input" type="radio" name="tipo" value="aluno" required>
+                <label class="label">Aluno</label>
+            </div>
+            
+            <div class="form-group">
+                <input class="radio-input" type="radio" name="tipo" value="prof" required>
+                <label class="label">Professor</label>
+            </div>
+
+            <div class="form-group">
+                <input class="radio-input" type="radio" name="tipo" value="sala" required>
+                <label class="label">Sala de defesa</label>
+            </div>
+
+            <div class="form-group">
+                <input class="radio-input" type="radio" name="tipo" value="agendamento" required>
+                <label class="label">Agendamento da defesa</label>
+            </div>
+
+            <button class="botao" type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+
+<body>
+    <h1>Dados do Cadastro</h1>
+    <p>Nome da Sala: {{ nomesala }}</p>
+    <p>Código da Sala: {{ codigosala }}</p>
+    <p>Local(Sala/Laboratorio): {{ local }}</p>
+    <p>Horário de Início: {{ inicio }}</p>
+    <p>Horário de Término: {{ termino }}</p>
+    <p>Reservado: {{ reservado }}</p>
+</body>
+
+</html>

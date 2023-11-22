@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body>
+    <fieldset>
+        <div>
+            <form action="/cadastro_sala" method="post">
+                <label for="nomesala">Nome da Sala:</label>
+                <input type="text" name="nomesala" id="nomesala">
+                <br>
+                <label for="codigosala">Código da Sala:</label>
+                <input type="text" name="codigosala" id="codigosala">
+                <br>
+                <label for="local">Local(Sala/Laboratorio):</label>
+                <input type="text" name="local" id="local">
+                <br>
+                <label for="inicio">Horário de Início:</label>
+                <input type="time" name="inicio" id="inicio">
+                <br>
+                <label for="termino">Horário de Término:</label>
+                <input type="time" name="termino" id="termino">
+                <br>
+                <label for="reservado">Reservado:</label>
+                <input type="text" name="reservado" id="reservado">
+                <br>
+                <button type="submit">Cadastrar</button>
+
+                <a href="/listar_sala" class="button" type="button">Listar</a>
+        </div>
+        </form>
+    </fieldset>
+
+</body>
+
+</html>

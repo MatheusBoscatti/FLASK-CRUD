@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>CPF</th>
+
+      <th>Nome</th>
+
+      <th>Instituição</th>
+
+      <th>Externo</th>
+
+      <th>Ações</th>
+    </tr>
+    <br>
+    {% for professor in professores %}
+    <tr>
+      <td>{{ professor.cpf }}</td>
+
+      <td>{{ professor.nome }}</td>
+
+      <td>{{ professor.instituicao }}</td>
+
+      <td>{{ professor.externo }}</td>
+
+      <td>
+        <form action="/excluir_prof" method="post">
+          <input type="hidden" name="cpf" value="{{ professor.cpf }}">
+          <button type="submit">Excluir</button>
+    
+          <a href="/atualizar_prof?cpf={{ professor.cpf }}" class="button" type="submit">Atualizar</a>
+        </form>
+      </td>
+    </tr>
+
+    {% endfor %}
+
+  </table>
+</body>
+
+</html>

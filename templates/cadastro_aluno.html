@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+
+</head>
+
+<body>
+    <fieldset>
+        <div class="div_aluno_prof">
+            <form action="/cadastro_aluno" method="POST">
+                <label>Nome</label>
+                <input type="text" name="nome" id="nome" required>
+                <br>
+                <label>Matrícula</label>
+                <input type="text" name="matricula" id="matricula" required>
+                <br>
+                <button type="submit">Cadastrar</button>
+
+                <a href="/listar_aluno" class="button" type="button">Listar</a>
+        </div>
+        </form>
+    </fieldset>
+</body>
+
+</html>

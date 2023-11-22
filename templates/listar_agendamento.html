@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>Código agendamento</th>
+
+      <th>Código da sala</th>
+
+      <th>Matrícula do Aluno</th>
+
+      <th>CPF do Professor Orientador</th>
+
+      <th>CPF do membro da banca 1</th>
+
+      <th>CPF do membro da banca 2</th>
+
+      <th>CPF do membro da banca 3</th>
+
+      <th>CPF do membro da banca 4</th>
+
+      <th>Ações</th>
+    </tr>
+    <br>
+    {% for agendamento in agendamentos %}
+    <tr>
+      <td>{{ agendamento.codigoagen }}</td>
+
+      <td>{{ agendamento.codigosala }}</td>
+
+      <td>{{ agendamento.matriculaaluno }}</td>
+
+      <td>{{ agendamento.cpfprof }}</td>
+
+      <td>{{ agendamento.cpf1 }}</td>
+
+      <td>{{ agendamento.cpf2 }}</td>
+
+      <td>{{ agendamento.cpf3 }}</td>
+
+      <td>{{ agendamento.cpf4 }}</td>
+
+      <td>
+        <form action="/excluir_agendamento" method="post">
+          <input type="hidden" name="codigoagen" value="{{ agendamento.codigoagen }}">
+          <button type="submit">Excluir</button>
+
+          <a href="/atualizar_agendamento?codigoagen={{ agendamento.codigoagen }}" class="button" type="submit">Atualizar</a>
+        </form>
+      </td>
+    </tr>
+
+    {% endfor %}
+
+  </table>
+</body>
+
+</html>

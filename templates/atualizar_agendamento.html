@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <form action="/atualizar_agendamento" method="post">
+        <label for="codigoagen">Código agendamento</label>
+        <input type="text" name="new_codigoagen" id="codigoagen" value="{{ codigoagen }}" required>
+        <input type="hidden" name="old_codigoagen" value="{{ codigoagen }}">
+        <br>
+        <label for="codigosala">Código da sala</label>
+        <input type="text" name="codigosala" id="codigosala" value="{{ codigosala }}" required>
+        <br>
+        <label for="matriculaaluno">Matrícula do Aluno</label>
+        <input type="text" name="matriculaaluno" id="matriculaaluno" value="{{ matriculaaluno }}" required>
+        <br>
+        <label for="cpfprof">CPF do Professor Orientador</label>
+        <input type="text" name="cpfprof" id="cpfprof" value="{{ cpfprof }}" required>
+        <br>
+        <label for="cpf1">CPF do membro da banca 1</label>
+        <input type="text" name="cpf1" id="cpf1" value="{{ cpf1 }}" required>
+        <br>
+        <label for="cpf2">CPF do membro da banca 2</label>
+        <input type="text" name="cpf2" id="cpf2" value="{{ cpf2 }}" required>
+        <br>
+        <label for="cpf3">CPF do membro da banca 3</label>
+        <input type="text" name="cpf3" id="cpf3" value="{{ cpf3 }}" required>
+        <br>
+        <label for="cpf4">CPF do membro da banca 4</label>
+        <input type="text" name="cpf4" id="cpf4" value="{{ cpf4 }}" required>
+        <br>
+        <input type="submit" value="Atualizar" >
+    </form>
+</body>
+
+</html>

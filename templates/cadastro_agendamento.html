@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <div>
+        <form action="/cadastro_agendamento" method="post">
+            <label for="codigoagen">Código agendamento</label>
+            <input type="text" name="codigoagen" id="codigoagen" required>
+            <br>
+            <label for="codigosala">Código da sala</label>
+            <input type="text" name="codigosala" id="codigosala" required>
+            <br>
+            <label for="matriculaaluno">Matrícula do Aluno</label>
+            <input type="text" name="matriculaaluno" id="matriculaaluno" required>
+            <br>
+            <label for="cpfprof">CPF do Professor Orientador</label>
+            <input type="text" name="cpfprof" id="cpfprof" required>
+            <br>
+            <label for="cpf1">CPF do membro da banca 1</label>
+            <input type="text" name="cpf1" id="cpf1" required>
+            <br>
+            <label for="cpf2">CPF do membro da banca 2</label>
+            <input type="text" name="cpf2" id="cpf2" required>
+            <br>
+            <label for="cpf3">CPF do membro da banca 3</label>
+            <input type="text" name="cpf3" id="cpf3" required>
+            <br>
+            <label for="cpf4">CPF do membro da banca 4</label>
+            <input type="text" name="cpf4" id="cpf4" required>
+            <br>
+            <button type="submit">Cadastrar</button>
+
+            <a href="/listar_agendamento" class="button" type="button">Listar</a>
+    </div>
+    </form>
+</body>
+
+</html>

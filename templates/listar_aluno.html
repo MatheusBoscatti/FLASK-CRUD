@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <table>
+    <tr> 
+      <th>Nome</th>
+
+      <th>Matrícula</th>
+
+      <th>Ações</th>
+    </tr>
+    <br>
+    {% for aluno in alunos %}
+    <tr>
+      <td>{{ aluno.nome }}</td>
+
+      <td>{{ aluno.matricula }}</td>
+
+      <td>
+        <form action="/excluir_aluno" method="post">
+          <input type="hidden" name="matricula" value="{{ aluno.matricula }}">
+          <button type="submit">Excluir</button> 
+    
+          <a href="/atualizar_aluno?matricula={{ aluno.matricula }}" class="button" type="submit">Atualizar</a>
+        </form>
+      </td>
+    </tr>
+
+    {% endfor %}
+
+  </table>
+</body>
+
+</html>
+

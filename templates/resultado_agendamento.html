@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+    <h1>Dados do Cadastro</h1>
+    <p>Código agendamento: {{ codigoagen }}</p>
+    <p>Código da sala: {{ codigosala }}</p>
+    <p>Matrícula do Aluno: {{ matriculaaluno }}</p>
+    <p>CPF do Professor Orientador: {{ cpfprof }}</p>
+    <p>CPF do membro da banca 1: {{ cpf1 }}</p>
+    <p>CPF do membro da banca 2: {{ cpf2 }}</p>
+    <p>CPF do membro da banca 3: {{ cpf3 }}</p>
+    <p>CPF do membro da banca 4: {{ cpf4 }}</p>
+</body>
+
+</html>

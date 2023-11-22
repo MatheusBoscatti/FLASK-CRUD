@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professores</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+<body class="aluno_prof">
+    <div class="dados_cadastrados">
+    <h1>Dados do Cadastro</h1>
+    <p>CPF: {{ cpf }}</p>
+    <p>Nome: {{ nome }}</p>
+    <p>Instituição: {{ instituicao }}</p>
+    <p>Externo: {{ externo }}</p>
+</div>
+</body>
+
+</html>

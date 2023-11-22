@@ -1,0 +1,2 @@
+  venv\Scripts\activate
+  flask --app main.py --debug run

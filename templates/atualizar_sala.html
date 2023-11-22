@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    
+</head>
+
+<body>
+    <fieldset>
+        <form action="/atualizar_sala" method="post">
+            <label for="nomesala">Nome da Sala:</label>
+            <input type="text" name="nomesala" id="nomesala" value="{{ nomesala }}">
+            <br>
+            <label for="codigosala">Código da Sala:</label>
+            <input type="text" name="new_codigosala" id="codigosala" value="{{ codigosala }}">
+            <input type="hidden" name="old_codigosala" value="{{ codigosala }}">
+            <br>
+            <label for="local">Local(Sala/Laboratorio):</label>
+            <input type="text" name="local" id="local" value="{{ local }}">
+            <br>
+            <label for="inicio">Horário de Início:</label>
+            <input type="time" name="inicio" id="inicio" value="{{ inicio }}">
+            <br>
+            <label for="termino">Horário de Término:</label>
+            <input type="time" name="termino" id="termino" value="{{ termino }}">
+            <br>
+            <label for="reservado">Reservado:</label>
+            <input type="text" name="reservado" id="reservado" value="{{ reservado}}">
+            <br>
+            <input type="submit" value="Atualizar" >
+        </form>
+    </fieldset>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>Nome da Sala</th>
+
+      <th>Código da Sala</th>
+
+      <th>Local(Sala/Laboratorio):</th>
+
+      <th>Horário de Início:</th>
+
+      <th>Horário de Término:</th>
+
+      <th>Reservado:</th>
+
+      <th>Ações</th>
+    </tr>
+    <br>
+    {% for sala in salas %}
+    <tr>
+      <td>{{ sala.nomesala }}</td>
+
+      <td>{{ sala.codigosala }}</td>
+
+      <td>{{ sala.local }}</td>
+
+      <td>{{ sala.inicio }}</td>
+
+      <td>{{ sala.termino }}</td>
+
+      <td>{{ sala.reservado }}</td>
+
+      <td>
+        <form action="/excluir_sala" method="post">
+          <input type="hidden" name="codigosala" value="{{ sala.codigosala }}">
+          <button type="submit">Excluir</button>
+    
+          <a href="/atualizar_sala?codigosala={{ sala.codigosala }}" class="button" type="submit">Atualizar</a>
+        </form>
+      </td>
+    </tr>
+
+    {% endfor %}
+
+  </table>
+</body>
+
+</html>
