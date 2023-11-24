@@ -5,7 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: whitesmoke;
+            width: 300px;
+            margin: 0 auto;
+        }
+    </style>
 
 </head>
 
@@ -36,7 +52,7 @@
         <label for="cpf4">CPF do membro da banca 4</label>
         <input type="text" name="cpf4" id="cpf4" value="{{ cpf4 }}" required>
         <br>
-        <input type="submit" value="Atualizar" >
+        <input type="submit" value="Atualizar">
     </form>
 </body>
 

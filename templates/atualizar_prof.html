@@ -5,7 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: whitesmoke;
+            width: 300px;
+            margin: 0 auto;
+        }
+    </style>
 
 </head>
 
@@ -13,7 +29,8 @@
     <fieldset>
         <form action="/atualizar_prof" method="post">
             <label for="cpf">CPF</label>
-            <input type="text" name="new_cpf" id="cpf" pattern="[0-9]*" title="Apenas números são permitidos" maxlength="11" value="{{ cpf }}">
+            <input type="text" name="new_cpf" id="cpf" pattern="[0-9]*" title="Apenas números são permitidos"
+                maxlength="11" value="{{ cpf }}">
             <input type="hidden" name="old_cpf" value="{{ cpf }}">
             <br>
             <label for="nome">Nome</label>
@@ -28,7 +45,7 @@
                 <option value="nao">Não</option>
             </select>
             <br>
-            <input type="submit" value="Atualizar" >
+            <input type="submit" value="Atualizar">
             <!-- <a href="/listar_prof" class="button" type="button">Atualizar</a> -->
 
     </fieldset>
