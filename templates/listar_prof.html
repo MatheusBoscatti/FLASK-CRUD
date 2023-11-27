@@ -4,61 +4,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Listar</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
   <style>
     body {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
     }
 
-   
-</style>
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th,
+    td {
+      border: 1px solid #dee2e6;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    form {
+      display: inline;
+    }
+
+    .button {
+      color: #007bff;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .button:hover {
+      text-decoration: underline;
+    }
+  </style>
 
 </head>
 
 <body>
-  <table>
-    <tr>
-      <th>CPF</th>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">CPF</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Instituição</th>
+          <th scope="col">Externo</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for professor in professores %}
+        <tr>
+          <td>{{ professor.cpf }}</td>
+          <td>{{ professor.nome }}</td>
+          <td>{{ professor.instituicao }}</td>
+          <td>{{ professor.externo }}</td>
+          <td>
+            <form action="/excluir_prof" method="post" class="d-inline">
+              <input type="hidden" name="cpf" value="{{ professor.cpf }}">
+              <button type="submit" class="btn btn-danger">Excluir</button>
+            </form>
+            <a href="/atualizar_prof?cpf={{ professor.cpf }}" class="btn btn-primary" role="button">Atualizar</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 
-      <th>Nome</th>
-
-      <th>Instituição</th>
-
-      <th>Externo</th>
-
-      <th>Ações</th>
-    </tr>
-    <br>
-    {% for professor in professores %}
-    <tr>
-      <td>{{ professor.cpf }}</td>
-
-      <td>{{ professor.nome }}</td>
-
-      <td>{{ professor.instituicao }}</td>
-
-      <td>{{ professor.externo }}</td>
-
-      <td>
-        <form action="/excluir_prof" method="post">
-          <input type="hidden" name="cpf" value="{{ professor.cpf }}">
-          <button type="submit">Excluir</button>
-    
-          <a href="/atualizar_prof?cpf={{ professor.cpf }}" class="button" type="submit">Atualizar</a>
-        </form>
-      </td>
-    </tr>
-
-    {% endfor %}
-
-  </table>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-eiOYFgt6a6w3eA/jh/1iqtCKh7gqEW/pmGRbEWd/Ep7xSSZrl5nbdKjE+UdRHD5S"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -7,13 +7,13 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 app.config[
     "SQLALCHEMY_DATABASE_URI"
-] = "postgresql://postgres:123456@localhost:5432/postgres"
+] = "mysql://root:123456@localhost/cadastramento"
 
 # Para criar tabela no postgres faça
 # 1) no terminal digite python com a venv ativada
-# 2) from main import db, app
-# 3) with app.app_context():
-#       db.create_all()
+# 2) from main import db, app #digite esse comando e aperte enter
+# 3) with app.app_context(): #digite esse comando e aperte enter
+#       db.create_all() #aperte tab e digite esse comando e aperte enter
 
 db = SQLAlchemy(app) 
 

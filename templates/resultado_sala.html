@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salas</title>
+    <title>Resultado</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -20,13 +22,13 @@
 </head>
 
 <body>
-    <h1>Dados do Cadastro</h1>
-    <p>Nome da Sala: {{ nomesala }}</p>
-    <p>Código da Sala: {{ codigosala }}</p>
-    <p>Local(Sala/Laboratorio): {{ local }}</p>
-    <p>Horário de Início: {{ inicio }}</p>
-    <p>Horário de Término: {{ termino }}</p>
-    <p>Reservado: {{ reservado }}</p>
+    <h1 class="mb-4"></h1>Dados do Cadastro</h1>
+    <p><strong>Nome da Sala:</strong> {{ nomesala }}</p>
+    <p><strong>Código da Sala:</strong> {{ codigosala }}</p>
+    <p><strong>Local(Sala/Laboratorio):</strong> {{ local }}</p>
+    <p><strong>Horário de Início:</strong> {{ inicio }}</p>
+    <p><strong>Horário de Término:</strong> {{ termino }}</p>
+    <p><strong>Reservado:</strong> {{ reservado }}</p>
 </body>
 
 </html>
