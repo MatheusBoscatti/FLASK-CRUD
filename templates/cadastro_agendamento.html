@@ -53,6 +53,7 @@
 <body>
     <div class="container">
         <form action="/cadastro_agendamento" method="post">
+            <legend>Cadastro Agendamento</legend>
             <div class="form-group">
                 <label for="codigoagen">Código de Agendamento</label>
                 <input type="text" class="form-control" name="codigoagen" id="codigoagen" required>
@@ -67,23 +68,33 @@
             </div>
             <div class="form-group">
                 <label for="cpfprof">CPF do Professor Orientador</label>
-                <input type="text" class="form-control" name="cpfprof" id="cpfprof" required>
+                <input type="text" class="form-control" name="cpfprof" id="cpfprof" pattern="[0-9]*"
+                    title="Apenas números são permitidos" minlength="11" maxlength="11" placeholder="CPF sem pontuação"
+                    required>
             </div>
             <div class="form-group">
                 <label for="cpf1">CPF do Membro da Banca 1</label>
-                <input type="text" class="form-control" name="cpf1" id="cpf1" required>
+                <input type="text" class="form-control" name="cpf1" id="cpf1" pattern="[0-9]*"
+                    title="Apenas números são permitidos" minlength="11" maxlength="11" placeholder="CPF sem pontuação"
+                    required>
             </div>
             <div class="form-group">
                 <label for="cpf2">CPF do Membro da Banca 2</label>
-                <input type="text" class="form-control" name="cpf2" id="cpf2" required>
+                <input type="text" class="form-control" name="cpf2" id="cpf2" pattern="[0-9]*"
+                    title="Apenas números são permitidos" minlength="11" maxlength="11" placeholder="CPF sem pontuação"
+                    required>
             </div>
             <div class="form-group">
                 <label for="cpf3">CPF do Membro da Banca 3</label>
-                <input type="text" class="form-control" name="cpf3" id="cpf3" required>
+                <input type="text" class="form-control" name="cpf3" id="cpf3" pattern="[0-9]*"
+                    title="Apenas números são permitidos" minlength="11" maxlength="11" placeholder="CPF sem pontuação"
+                    required>
             </div>
             <div class="form-group">
                 <label for="cpf4">CPF do Membro da Banca 4</label>
-                <input type="text" class="form-control" name="cpf4" id="cpf4" required>
+                <input type="text" class="form-control" name="cpf4" id="cpf4" pattern="[0-9]*"
+                    title="Apenas números são permitidos" minlength="11" maxlength="11" placeholder="CPF sem pontuação"
+                    required>
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
             <a href="/listar_agendamento" class="btn btn-secondary" type="button">Listar</a>

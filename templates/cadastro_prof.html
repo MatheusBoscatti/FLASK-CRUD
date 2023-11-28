@@ -30,31 +30,32 @@
 
 <body>
     <div class="container">
-                <form action="/cadastro_prof" method="post">
-                    <div class="mb-2">
-                        <label for="cpf">CPF</label>
-                        <input type="text" class="form-control" name="cpf" id="cpf" pattern="[0-9]*"
-                            title="Apenas números são permitidos" maxlength="11" placeholder="CPF sem pontuação"
-                            required>
-                    </div>
-                    <div class="mb-2">
-                        <label for="nome">Nome</label>
-                        <input type="text" class="form-control" name="nome" id="nome" required>
-                    </div>
-                    <div class="mb-2">
-                        <label for="instituicao">Instituição</label>
-                        <input type="text" class="form-control" name="instituicao" id="instituicao" required>
-                    </div>
-                    <div class="mb-2">
-                        <label for="externo">Externo</label>
-                        <select class="form-control" name="externo" id="externo" required>
-                            <option value="sim">Sim</option>
-                            <option value="nao">Não</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
-                    <a href="/listar_prof" class="btn btn-secondary" type="button">Listar</a>
-                </form>
+        <form action="/cadastro_prof" method="post">
+            <legend>Cadastro Professor</legend>
+            <div class="mb-2">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" name="cpf" id="cpf" pattern="[0-9]*"
+                    title="Apenas números são permitidos" minlength="11" maxlength="11" placeholder="CPF sem pontuação"
+                    required>
+            </div>
+            <div class="mb-2">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" minlength="2" name="nome" id="nome" required>
+            </div>
+            <div class="mb-2">
+                <label for="instituicao">Instituição</label>
+                <input type="text" class="form-control" name="instituicao" id="instituicao" required>
+            </div>
+            <div class="mb-2">
+                <label for="externo">Externo</label>
+                <select class="form-control" name="externo" id="externo" required>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <a href="/listar_prof" class="btn btn-secondary" type="button">Listar</a>
+        </form>
     </div>
 </body>
 </body>

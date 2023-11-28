@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -22,35 +24,48 @@
             margin: 0 auto;
         }
     </style>
-    
-    
+
+
 </head>
 
 <body>
-    <fieldset>
-        <form action="/atualizar_sala" method="post">
-            <label for="nomesala">Nome da Sala:</label>
-            <input type="text" name="nomesala" id="nomesala" value="{{ nomesala }}">
-            <br>
-            <label for="codigosala">Código da Sala:</label>
-            <input type="text" name="new_codigosala" id="codigosala" value="{{ codigosala }}">
-            <input type="hidden" name="old_codigosala" value="{{ codigosala }}">
-            <br>
-            <label for="local">Local(Sala/Laboratorio):</label>
-            <input type="text" name="local" id="local" value="{{ local }}">
-            <br>
-            <label for="inicio">Horário de Início:</label>
-            <input type="time" name="inicio" id="inicio" value="{{ inicio }}">
-            <br>
-            <label for="termino">Horário de Término:</label>
-            <input type="time" name="termino" id="termino" value="{{ termino }}">
-            <br>
-            <label for="reservado">Reservado:</label>
-            <input type="text" name="reservado" id="reservado" value="{{ reservado}}">
-            <br>
-            <input type="submit" value="Atualizar" >
-        </form>
-    </fieldset>
+
+    <div class="container mt-5">
+        <fieldset>
+            <form action="/atualizar_sala" method="post">
+                <legend>Atualizar Sala</legend>
+                <div class="form-group">
+                    <label for="nomesala">Nome da Sala:</label>
+                    <input type="text" class="form-control" name="nomesala" id="nomesala" value="{{ nomesala }}"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="new_codigosala">Código da Sala:</label>
+                    <input type="text" class="form-control" name="new_codigosala" id="new_codigosala"
+                        value="{{ codigosala }}" required>
+                    <input type="hidden" name="old_codigosala" value="{{ codigosala }}">
+                </div>
+                <div class="form-group">
+                    <label for="local">Local (Sala/Laboratório):</label>
+                    <input type="text" class="form-control" name="local" id="local" value="{{ local }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="inicio">Horário de Início:</label>
+                    <input type="time" class="form-control" name="inicio" id="inicio" value="{{ inicio }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="termino">Horário de Término:</label>
+                    <input type="time" class="form-control" name="termino" id="termino" value="{{ termino }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="reservado">Reservado:</label>
+                    <input type="text" class="form-control" name="reservado" id="reservado" value="{{ reservado }}"
+                        required>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Atualizar">
+            </form>
+        </fieldset>
+    </div>
 
 </body>
 

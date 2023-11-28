@@ -35,19 +35,20 @@
 
 <body>
     <div class="container">
-            <form action="/atualizar_aluno" method="POST">
-                <div class="mb-3">
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="nome" value="{{ nome }}" required>
-                </div>
-                <div class="mb-3">
-                    <label for="matricula" class="form-label">Matrícula</label>
-                    <input type="text" class="form-control" id="matricula" name="new_matricula" value="{{ matricula }}"
-                        required>
-                    <input type="hidden" name="old_matricula" value="{{ matricula }}">
-                </div>
-                <button type="submit" class="btn btn-primary">Atualizar</button>
-            </form>
+        <form action="/atualizar_aluno" method="POST">
+            <legend>Atualizar Aluno</legend>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" value="{{ nome }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="matricula" class="form-label">Matrícula</label>
+                <input type="text" class="form-control" id="matricula" name="new_matricula" value="{{ matricula }}"
+                    required>
+                <input type="hidden" name="old_matricula" value="{{ matricula }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+        </form>
     </div>
 </body>
 
