@@ -22,7 +22,11 @@
         form {
             background-color: whitesmoke;
             width: 300px;
+            height: 300px;
             margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 
@@ -32,23 +36,19 @@
 
 <body>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form action="/cadastro_aluno" method="POST">
-                    <legend>Cadastro Aluno</legend>
-                    <div class="mb-3">
-                        <label for="nome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="matricula" class="form-label">Matrícula</label>
-                        <input type="text" class="form-control" id="matricula" name="matricula" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
-                    <a href="/listar_aluno" class="btn btn-secondary" role="button">Listar</a>
-                </form>
+        <form action="/cadastro_aluno" method="POST">
+            <legend>Cadastro Aluno</legend>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
             </div>
-        </div>
+            <div class="mb-3">
+                <label for="matricula" class="form-label">Matrícula</label>
+                <input type="text" class="form-control" id="matricula" name="matricula" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <a href="/listar_aluno" class="btn btn-secondary" role="button">Listar</a>
+        </form>
     </div>
 </body>
 
